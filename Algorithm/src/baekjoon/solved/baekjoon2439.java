@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.solved;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,10 +6,10 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-//https://www.acmicpc.net/problem/1000
-//A+B
+// https://www.acmicpc.net/problem/2439
+// 별 찍기 - 2
 
-public class baekjoon1000 {
+public class baekjoon2439 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter output = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -17,10 +17,17 @@ public class baekjoon1000 {
 
 		st = new StringTokenizer(input.readLine());
 
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(st.nextToken());
 
-		output.append((a + b) + "");
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N-i-1; j++) {
+				output.append(" ");
+			}
+			for (int j = N-i-1; j < N; j++) {
+				output.append("*");
+			}
+			output.append("\n");
+		}
 
 		output.flush();
 		output.close();

@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.solved;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,19 +6,21 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-// https://www.acmicpc.net/problem/2739
-// 구구단
+//https://www.acmicpc.net/problem/1001
+//A-B
 
-public class baekjoon2739 {
+public class baekjoon1001 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter output = new BufferedWriter(new OutputStreamWriter(System.out));
+		StringTokenizer st;
 
-		int N = Integer.parseInt(input.readLine());
+		st = new StringTokenizer(input.readLine());
 
-		for (int i = 1; i <= 9; i++) {
-			output.append(N + " * " + i + " = " + (N*i) + "\n");
-		}
+		int a = Integer.parseInt(st.nextToken());
+		int b = Integer.parseInt(st.nextToken());
+
+		output.append((a - b) + "");
 
 		output.flush();
 		output.close();

@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.solved;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
