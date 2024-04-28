@@ -1,4 +1,4 @@
-package baekjoon.unsolved;
+package baekjoon.solved;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -28,18 +28,22 @@ public class baekjoon6064 {
 			HashSet<String> visit = new HashSet<>();
 
 			int k = x;
+			int tmpx = 0;
+			int tmpy = 0;
 			while (true) {
-				if (k % N == y) {
+				tmpx = k % M == 0 ? M : k%M;
+				tmpy = k % N == 0 ? N : k%N;
+				if (x == tmpx && y == tmpy) {
 					break;
 				} else {
-					String cur = (k % M) + "," + (k % N);
+					String cur = tmpx + "," + tmpy;
 					if (visit.contains(cur)) {
 						k = -1;
 						break;
 					} else {
 						visit.add(cur);
-						k = k + M;
 					}
+					k += M;
 				}
 			}
 
